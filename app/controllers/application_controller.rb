@@ -23,4 +23,9 @@ class ApplicationController < Sinatra::Base
     categories.to_json
   end
 
+  # get "/exercise_categories" do 
+  #   exercise_categories = ExerciseCategory.all
+  #   exercise_categories.to_json
+  # end
+
 end
