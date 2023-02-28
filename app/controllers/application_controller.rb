@@ -11,4 +11,14 @@ class ApplicationController < Sinatra::Base
     exercises.to_json
   end
 
+  get "/exercises/:id" do
+    exercise = Exercise.find(params[:id])
+    exercise.to_json
+  end
+
+  get "/categories" do
+    categories = Category.all
+    categories.to_json
+  end
+
 end

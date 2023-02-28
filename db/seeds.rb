@@ -13,4 +13,13 @@ Exercise.create([
     {exercise: "2-mile run", for_reps: "true", for_time: "false", for_weight: "false"}
 ])
 
+Category.create([
+    {category: "Bodyweight"},
+    {category: "Barbell"},
+    {category: "Cardio"},
+    {category: "Upper body"},
+    {category: "Lower body"},
+    {category: "Full body"}
+])
+
 puts "✅ Done seeding!"
