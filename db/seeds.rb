@@ -39,4 +39,8 @@ ExerciseCategory.create([
     {category_id: 7, exercise_id: 6}
 ])
 
+UserProfile.create([
+    {}
+])
+
 puts "✅ Done seeding!"
