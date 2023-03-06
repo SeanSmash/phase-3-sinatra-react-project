@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_03_06_033617) do
+ActiveRecord::Schema.define(version: 2023_03_06_041101) do
 
   create_table "categories", force: :cascade do |t|
     t.string "category"
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 2023_03_06_033617) do
   create_table "personal_records", force: :cascade do |t|
     t.integer "user_profile_id"
     t.integer "exercise_id"
-    t.string "metric"
+    t.integer "metric"
     t.datetime "date_created"
   end
 
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2023_03_06_033617) do
     t.string "user_name"
     t.string "first_name"
     t.string "last_name"
-    t.string "birthdate"
+    t.datetime "birthdate"
     t.string "gender"
   end
 
