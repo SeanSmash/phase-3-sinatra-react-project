@@ -18,14 +18,24 @@ class ApplicationController < Sinatra::Base
     exercise.to_json
   end
 
+  get "/exercises/:id/categories" do
+    exercise = Exercise.find(params[:id])
+    exercise.categories.all.to_json
+  end
+
   get "/categories" do
     categories = Category.all
     categories.to_json
   end
 
-  # get "/exercise_categories" do 
-  #   exercise_categories = ExerciseCategory.all
-  #   exercise_categories.to_json
-  # end
+  get "/user_profiles" do
+    user_profiles = UserProfile.all
+    user_profiles.to_json
+  end
+
+  get "/personal_records/:id" do
+    user = UserProfile.find(params[:id])
+    userRecords = user.personal_records.order(date_created: :desc).to_json
+  end
 
 end

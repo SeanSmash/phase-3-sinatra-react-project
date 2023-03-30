@@ -10,7 +10,7 @@ Exercise.create([
     {exercise: "Push-ups", for_reps: "false", for_time: "false", for_weight: "true"},
     {exercise: "Sit-ups", for_reps: "true", for_time: "false", for_weight: "false"},
     {exercise: "1-mile run", for_reps: "false", for_time: "true", for_weight: "false"},
-    {exercise: "2-mile run", for_reps: "true", for_time: "false", for_weight: "false"}
+    {exercise: "2-mile run", for_reps: "false", for_time: "true", for_weight: "false"}
 ])
 
 Category.create([
