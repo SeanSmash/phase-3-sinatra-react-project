@@ -38,6 +38,13 @@ class ApplicationController < Sinatra::Base
     categories.to_json
   end
 
+  post "/categories" do
+    category = Category.create(
+      category: params[:category]
+    )
+    category.to_json
+  end
+
   get "/exercise_categories" do
     exercise_categories = ExerciseCategory.all
     exercise_categories.to_json
