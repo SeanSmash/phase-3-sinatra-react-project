@@ -3,24 +3,24 @@ puts "🌱 Seeding spices..."
 # Seed your database here
 
 Exercise.create([
-    {exercise: "Bench Press", for_reps: "false", for_time: "false", for_weight: "true"},
-    {exercise: "Deadlift", for_reps: "false", for_time: "false", for_weight: "true"},
-    {exercise: "Squat", for_reps: "false", for_time: "false", for_weight: "true"},
-    {exercise: "Pull-ups", for_reps: "true", for_time: "false", for_weight: "false"},
-    {exercise: "Push-ups", for_reps: "false", for_time: "false", for_weight: "true"},
-    {exercise: "Sit-ups", for_reps: "true", for_time: "false", for_weight: "false"},
+    {exercise: "bench press", for_reps: "false", for_time: "false", for_weight: "true"},
+    {exercise: "deadlift", for_reps: "false", for_time: "false", for_weight: "true"},
+    {exercise: "squat", for_reps: "false", for_time: "false", for_weight: "true"},
+    {exercise: "pull-ups", for_reps: "true", for_time: "false", for_weight: "false"},
+    {exercise: "push-ups", for_reps: "true", for_time: "false", for_weight: "false"},
+    {exercise: "sit-ups", for_reps: "true", for_time: "false", for_weight: "false"},
     {exercise: "1-mile run", for_reps: "false", for_time: "true", for_weight: "false"},
     {exercise: "2-mile run", for_reps: "false", for_time: "true", for_weight: "false"}
 ])
 
 Category.create([
-    {category: "Bodyweight"},
-    {category: "Barbell"},
-    {category: "Cardio"},
-    {category: "Upper body"},
-    {category: "Lower body"},
-    {category: "Full body"},
-    {category: "Core"}
+    {category: "bodyweight"},
+    {category: "barbell"},
+    {category: "cardio"},
+    {category: "upper body"},
+    {category: "lower body"},
+    {category: "full body"},
+    {category: "core"}
 ])
 
 ExerciseCategory.create([
