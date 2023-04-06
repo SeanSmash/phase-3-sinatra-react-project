@@ -38,4 +38,31 @@ class ApplicationController < Sinatra::Base
     userRecords = user.personal_records.order(date_created: :desc).to_json
   end
 
+  delete '/personal_records/:id' do
+    personal_record = PersonalRecord.find(params[:id])
+    personal_record.destroy
+    personal_record.to_json
+  end
+
+  post '/personal_records/' do
+    personal_record = PersonalRecord.create(
+      user_profile_id: params[:user_profile_id],
+      exercise_id: params[:exercise_id],
+      metric: params[:metric],
+      date_created: params[:date_created]
+    )
+    baked_good.to_json
+  end
+  {user_profile_id: 1, exercise_id: 1, metric: 275, date_created: "20230228"},
+
+
+  patch '/personal_records/:id' do
+    personal_record = PersonalRecord.find(params[:id])
+    personal_record.update(
+      metric: params[:metric],
+      date_created: params[:date_created]
+    )
+    personal_record.to_json
+  end
+
 end
