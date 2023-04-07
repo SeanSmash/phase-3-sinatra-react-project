@@ -35,7 +35,7 @@ class ApplicationController < Sinatra::Base
 
   get "/categories" do
     categories = Category.all
-    categories.to_json
+    categories.order(category: :asc).to_json
   end
 
   post "/categories" do

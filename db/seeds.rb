@@ -21,7 +21,8 @@ Category.create([
     {category: "lower body"},
     {category: "full body"},
     {category: "core"},
-    {category: "dumbbell"}
+    {category: "dumbbell"},
+    {category: "olympic"}
 ])
 
 ExerciseCategory.create([
