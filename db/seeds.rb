@@ -44,7 +44,7 @@ ExerciseCategory.create([
 
 UserProfile.create([
     {user_name: "Joe_Test", first_name: "Joe", last_name: "Test", birthdate: "19900101", gender: "Male"},
-    {user_name: "Jane_Test", first_name: "Jane", last_name: "Test", birthdate: "20000101", gender: "Male"}
+    {user_name: "Jane_Test", first_name: "Jane", last_name: "Test", birthdate: "20000101", gender: "Female"}
 ])
 
 PersonalRecord.create([

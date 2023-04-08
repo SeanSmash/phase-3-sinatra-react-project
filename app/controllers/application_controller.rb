@@ -58,12 +58,39 @@ class ApplicationController < Sinatra::Base
     exercise_category.to_json
   end
 
+  get "/user_profiles/:id" do
+    user = UserProfile.find(params[:id])
+    user.to_json
+  end
+
+  patch "/user_profiles/:id" do
+    user = UserProfile.find(params[:id])
+    user.update(
+      first_name: params[:first_name],
+      last_name: params[:last_name],
+      gender: params[:gender],
+      birthdate: params[:birthdate]
+    )
+    user.to_json
+  end
+
   get "/user_profiles" do
     user_profiles = UserProfile.all
     user_profiles.to_json
   end
 
-  get "/personal_records/:id" do
+  post "/user_profiles" do
+    new_user = UserProfile.create(
+      user_name: params[:user_name],
+      first_name: params[:first_name],
+      last_name: params[:last_name],
+      birthdate: params[:birthdate],
+      gender: params[:gender]
+    )
+    new_user.to_json
+  end
+
+  get '/personal_records/:id' do
     user = UserProfile.find(params[:id])
     userRecords = user.personal_records.order(date_created: :desc).to_json
   end
