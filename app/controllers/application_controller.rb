@@ -66,6 +66,7 @@ class ApplicationController < Sinatra::Base
   patch "/user_profiles/:id" do
     user = UserProfile.find(params[:id])
     user.update(
+      user_name: params[:user_name],
       first_name: params[:first_name],
       last_name: params[:last_name],
       gender: params[:gender],
